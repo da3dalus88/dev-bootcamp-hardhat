@@ -12,7 +12,7 @@ module.exports = async ({
     let ethUsdPriceFeedAddress
     if (chainId == 31337) {
         const EthUsdAggregator = await deployments.get('EthUsdAggregator')
-        ethUsdPriceFeedAddress = EthUsdAggregator.address
+       ethUsdPriceFeedAddress = EthUsdAggregator.address
     } else {
         ethUsdPriceFeedAddress = networkConfig[chainId]['ethUsdPriceFeed']
     }
